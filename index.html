@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Review System</title>
+ 
+    <style>
+
+.review {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.review h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.pros, .cons, .rating {
+  font-size: 14px;
+  color: #555;
+}
+
+.pros::before, .cons::before, .rating::before {
+  content: "•";
+  margin-right: 5px;
+  color: #008000; 
+}
+
+.pros {
+  color: #008000; 
+}
+
+.cons {
+  color: #ff0000; 
+}
+
+.rating {
+  color: #0000ff; 
+}
+
+        .rating {
+            display: inline-block;
+            font-size: 0;
+        }
+
+        .rating input {
+            display: none;
+        }
+
+        .rating label {
+            font-size: 24px;
+            color: #FFD700;
+            cursor: pointer;
+        }
+
+        .rating label:hover,
+        .rating input:checked ~ label {
+            color: #FFD700;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Company Review System</h1>
+    <br><br>
+    <label for="Company-name">Company Name:</label>
+    <input type="text" id="Company-name">
+    <br><br>
+    <label for="pros">Pros:</label>
+    <br>
+    <textarea id="pros" name="pros" rows="4" cols="50"></textarea>
+    <br><br>
+    <label for="cons">Cons:</label>
+    <br>
+    <textarea id="cons" name="cons" rows="4" cols="50"></textarea>
+    <br><br>
+    <h2>Rate this item:</h2>
+    <div class="rating">
+        <input type="radio" name="star" id="star5">
+        <label for="star5">☆</label>
+        <input type="radio" name="star" id="star4">
+        <label for="star4">☆</label>
+        <input type="radio" name="star" id="star3">
+        <label for="star3">☆</label>
+        <input type="radio" name="star" id="star2">
+        <label for="star2">☆</label>
+        <input type="radio" name="star" id="star1">
+        <label for="star1">☆</label>
+    </div>
+    <!-- <p>Your rating: <span id="user-rating">0</span> stars</p> -->
+    <br><br>
+    <button type="button" id="submit-btn">Submit</button>
+    <br><br>
+    <div id="search-container" style="text-align: center;">
+        <input placeholder="Search by name" id="search-input">
+        <button id="search-btn">Search</button>
+    </div>
+    <div id="search-display"></div>
+    <script src="index.js"></script>
+     
+        
+
+
+
+    </main>
+</body>
+</html>
